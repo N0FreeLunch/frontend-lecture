@@ -1,0 +1,30 @@
+1.Write a function that extracts a specified number of characters from a string.
+Example: truncate_string("Hello, World",5); // returns "Hello"
+
+
+2. Write a function that creates a hyphenated and lowercase version of a string.
+Example: string_parameterize("Lorem ipsum dolor sit amet"); // returns "lorem-ipsum-dolor-sit-amet"
+
+
+3. Calculate the sum of odd numbers greater than X and less than Y.
+Example: sum_of_odd_numbers(1,3)// returns 4
+Example: sum_of_odd_numbers(5,20)// returns 96
+
+
+4.Create a function that will convert from Celsius to Fahrenheit.
+Example: celsius_to_fahrenheit(40) // returns 104
+
+
+5.Calculate the sum of numbers in an array of numbers.
+Example: sum_of_array([1,1,2])// returns 4
+Example: sum_of_array([1,1,2,5,5])// returns 14
+
+
+6.Calculate the mean of the numbers in an array of numbers (round to the nearest decimal point)
+Example: mean_of_array([1,1,2])// returns 1.3
+Example: mean_of_array([1,1,2,5,5])// returns 2.8
+
+
+7. Create a function that receives an array of numbers and returns an array containing only the positive numbers.
+Example: only_positive([1,-100,2,-2])// returns [1,2]
+Example: only_positive([1,-1,-2,58,24])// returns [1,58,24]
