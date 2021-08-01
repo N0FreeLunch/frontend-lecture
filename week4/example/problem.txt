@@ -1,0 +1,28 @@
+Assignment 4: Creating HTML from a Data Source
+
+This week, your assignment is to iterate over an array of data to create an HTML document.
+
+Start with:
+
+Create your own data set or use the example data sets attached below
+Print a unique container (e.g. a <li> or <div>) for each item in your data set.
+Try to:
+
+Style the document to make the data legible.
+Extra Challenge:
+
+Create a button with an event listener that will only show 5 pieces of data at a time.
+Make the button work for "next page" or "previous page"
+
+
+Example Files:
+
+studio-ghibli-films.json download
+Data stored as JSON file
+studio-ghibli-films.js download
+Data stored as JavaScript Array (No Need to Use Fetch)
+studio-ghibli-films_simple.js download
+Data stored as JavaScript Array with certain ID strings and URL removed for legibility.
+API Documentation
+https://ghibliapi.herokuapp.com/ (Links to an external site.)
+I've also attached my final result for the subway map example from the demo videos.
