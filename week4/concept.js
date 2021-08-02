@@ -91,3 +91,100 @@ console.log(document.querySelector("#contents"));
 
 document.querySelector("#contents").innerText = "test";
 // #contents는 id="contents"인 태그를 가져와라
+
+console.log(Number.parseFloat(1231324).toFixed(2));
+console.log("test test".replace(" ", "-"));
+// 객체가 가지고 있는 뭔가를 쓸 때는 .을 사용한다.
+
+console.log("dom element : ", document.querySelector("#contents"));
+// #은 id를 의미하고 #어쩌구의 어쩌구는 contents
+// <div id="contents"></div>
+
+// css 선택자 : https://code.tutsplus.com/ko/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
+// 돔 엘리먼트는 객체(object)이다. 뭔가를 가지고 있다.
+// document.querySelector("#contents").innerText = "test";
+// document.querySelector("#contents") 라는 돔 엘리먼트는 innerText 속성을 가지고 있다.
+// 돔 엘리먼트의 innerText라는 속성에  "test"를 넣으면 <div id="contents"></div> 이 안에 test 들어간다.
+
+// HTML 안에 있는 돔을 선택을 했잖아
+// 자바스크립트 안에 새로운 돔을 만들거야
+console.log("create element : ", document.createElement('div'));
+
+var testDom = document.createElement('div');
+console.log("test dom : ", testDom);
+
+testDom.innerText = "testDom";
+testDom.innerText = "testDom1";
+
+// testDom을 ID가 contents인 테그 안에 집어 넣어 보자.
+// 돔 엘리먼트 객체가 가진 appendChild 함수를 사용한다.
+document.querySelector("#contents").appendChild(testDom);
+// appendChild : 태그에 자식태그로 맨 마지막 위치에 태그를 달아준다.
+
+// 자바스크립트에서 태그를 만들어서 HTML 문서에 넣은 것
+
+// html 문서 안에 body 태그 안에 태그 직접 적지 않고 자바스크립트로만 태그를 만들 수 있다.
+
+var parentTag = document.createElement('div');
+
+// <div id="contents" style="color : green;"></div> 태그에 css 속성을 지정할 수 있다.
+// style 어트리뷰트 안에 color 프로퍼티에 green이란 값을 지정했다
+// style attribute의 value가 "color : green;", color property의 value가 green
+// 태그의 어트리 뷰트랑 프로퍼티를 지정하는 방식을 자바스크립트로 하자.
+
+// 태그 안에 style="background-color : blue;"
+parentTag.style.backgroundColor = "blue";
+// 태그 안에 style="height : 100px;"
+parentTag.style.height = "100px";
+// 태그 안에 style="height : 100px;"
+parentTag.style.width = "100px";
+
+
+// 자바스크립트 상에서만 존재
+console.log("parentTag : ", parentTag);
+
+// body에 childtag로 붙일 거야
+// document.body : body 태그 선택, body 태그의 돔 엘리먼트
+document.body.appendChild(parentTag);
+
+
+
+var tag1 = document.createElement('div');
+var tag2 = document.createElement('div');
+var tag3 = document.createElement('div');
+var tag4 = document.createElement('div');
+var tag5 = document.createElement('div');
+
+tag1.innerText = "태그1";
+tag1.style.color = "yellow";
+tag2.innerText = "태그2";
+tag2.style.color = "yellow";
+tag3.innerText = "태그3";
+tag3.style.color = "yellow";
+tag4.innerText = "태그4";
+tag4.style.color = "yellow";
+tag5.innerText = "태그5";
+tag5.style.color = "yellow";
+
+parentTag.appendChild(tag1);
+parentTag.appendChild(tag2);
+parentTag.appendChild(tag3);
+parentTag.appendChild(tag4);
+parentTag.appendChild(tag5);
+
+// your assignment is to iterate over an array of data to create an HTML document.
+// HTML 도큐먼트를 만드는 배열을 순회(iterator)하라
+
+var tagList = [tag1,tag2,tag3,tag4,tag5];
+
+var parentTag2 = document.createElement('div');
+parentTag2.style.backgroundColor = "green";
+
+document.body.appendChild(parentTag2);
+
+for (var i = 0; i < tagList.length; i++) {
+  parentTag2.appendChild(tagList[i]);
+}
+// 파란색 박스 안에 넣은 tag1,2,3,4,5가 초록색 박스 안드로 들어갔다.
+// 만든 태그는 하나만 존재한다.
