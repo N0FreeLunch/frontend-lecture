@@ -188,3 +188,103 @@ for (var i = 0; i < tagList.length; i++) {
 }
 // 파란색 박스 안에 넣은 tag1,2,3,4,5가 초록색 박스 안드로 들어갔다.
 // 만든 태그는 하나만 존재한다.
+
+document.write('<div>document의 wirte 메소드를 사용</div>');
+// 객체가 가지고 있는 함수를 메서드라고 한다.
+// 객체가 write라는 함수를 가지고 있다. 이걸 메소드라고 한다.
+// 자바스크립트에서 문자열로 HTML 도큐먼트를 찍어 낼 수 있다.
+
+
+// document.write('
+// <div>이렇게 문자열을 개행(엔터)해서 쓸 수 없다.</div>
+// ');
+
+document.write(`
+ <div>백틱을 사용하면 문자열(엔터)을 개행해서 쓸 수 있다.</div>
+`);
+
+document.write(`
+ <div>
+    <div style='color: green;'>green</div>
+    <div style='color: red;'>red</div>
+    <div style='color: blue;'>blue</div>
+ </div>
+`);
+// 자바스크립트 문자열을 통해서 HTML 태그 쓰듯이 쓸 수 있다.
+
+
+// 브라우저 HTML 파일을 읽어 HTML 파일 안에는 태그가 있다.
+// 태그에 따라서 화면에 태그를 브라우저 표시를 해 준다.
+// 표시 기능 이외에 자바스크립트로 태그를 가져온다.
+// 실제 태그를 => 가상 태그로 만드는 작업을 한다.
+// 자바스크립트 안에 실제 태그를 가상태로 만든 것들을 다 넣는다.
+// document.querySelector("#contents")
+// 자바스크립트에서 돔을 선택하고 조작할 수 있다.
+
+
+// 자바스크립트에서 가상 돔을 만들어서 실제 HTML에 넣은 것
+// document.body.appendChild(document.createElement('div'));
+
+// 문자열로 태그를 찍는 방식
+// document.write('<div></div>');
+// 문자열로 HTML에 찍은 다음에 찍어내면 자바스크립로 가져 오는 것.
+
+
+// green 문자열 만들기
+var greenStr = document.createElement('div');
+greenStr.innerText = "green";
+greenStr.style.color = "green";
+document.body.appendChild(greenStr);
+
+document.write('<div id="green" style="color : green;">green</div>');
+
+// green의 색을 red 바꾸고 싶다.
+// 가상 돔을 만들어서 사용한 방식
+greenStr.style.color = "red";
+
+// write로 찍어서 사용했을 때의 방식
+var useWrite = document.querySelector("#green");
+useWrite.style.color = "red";
+
+
+// 태그에 id="***" 를 수 없이 만들어서 document.querySelector 선택해서 조작할래?
+// 가상돔을 만들어서 조작할래?
+
+// 문자열 안에 변수를 넣고 싶다.
+var innerStr = "var";
+console.log("double quotation marks : ", "abcd"+innerStr+"efgh"+innerStr+"ijkl");
+// console.log("double quotation marks : ", "abcd"+innerStr+"efgh"+innerStr+"ijkl");
+console.log("표현 그대로 : ", "abcd${innerStr}efgh${innerStr}ijkl");
+
+// 백틱을 사용할 경우 ${} 달러 브레이스 표현으로 변수를 넣을 수 있다.
+console.log("backtick : ", `abcd${innerStr}efgh${innerStr}ijkl`);
+
+
+var g = "green";
+var r = "red";
+var b = "blue";
+
+document.write(`
+ <div>
+    <div style='color: ${g};'>${g}</div>
+    <div style='color: ${r};'>${r}</div>
+    <div style='color: ${b};'>${b}</div>
+ </div>
+`);
+
+
+// document.write 이 코드가 실행될 때 화면에다가 찍어주는 것.
+// HTML 안에 있는 다양한 대상안에 마음대로 넣기 힘들다.
+
+// parentTag는 위에서 만든 태그이다.
+parentTag.innerHTML = `
+  <div style="color:white;">innerHTML</div>
+`;
+// innerHTML HTML 태그를 집어 넣는 것
+
+// parentTag.innerText = `
+//   <div style="color:white;">innerHTML</div>
+// `;
+// innerText는 써준 문자 그대로 출력 된다.
+
+// document.write는 잘 안 쓰고 innerHTML을 써 준다.
