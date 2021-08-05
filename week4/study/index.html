@@ -12,10 +12,17 @@
   </style>
 </head>
 <body>
+  <!-- 브라우저가 HTML 파일은 위에서 아래로 순차적으로 해석해서 표시를 한다. -->
     <div id="contents" style="color : green;"></div>
-    <script src="./concept.js"></script>
+    <script src="./concept1.js"></script>
 
     <script src="./file1.js"></script>
     <script src="./file2.js"></script>
+
+    <!-- 버튼을 누르면 자바스크립트 코드 console.log('javascript code')가 실행이 된다.-->
+    <button onclick="console.log('javascript code in onclick attribute')">html button</button>
+    <button id="sampleBtn">select html button tag</button>
+
+    <script src="./concept2.js"></script>
 </body>
 </html>

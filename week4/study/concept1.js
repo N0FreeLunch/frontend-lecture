@@ -288,3 +288,15 @@ parentTag.innerHTML = `
 // innerText는 써준 문자 그대로 출력 된다.
 
 // document.write는 잘 안 쓰고 innerHTML을 써 준다.
+
+
+// 버튼 만들기
+
+// id가 sampleBtn인 태그를 선택한다.
+var sampleBtn = document.querySelector('#sampleBtn');
+console.log("select btn : ", sampleBtn);
+
+// null(아무것도 없다.)이 나오는데 이유는 <script src="./concept1.js"></script> 실행 되고 나서
+// <button id="sampleBtn">select html button tag</button>이 나오기 때문
+// <script src="./concept1.js"></script>가 실행이 될 때는 <button id="sampleBtn">select html button tag</button>가
+// 아직 브라우저에서 읽히지 않은 상태라서 없는 줄 안다.
