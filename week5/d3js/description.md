@@ -1,0 +1,3 @@
+- d3.js :  https://github.com/d3/d3/wiki
+- 튜토리얼 :  https://github.com/d3/d3/wiki/Tutorials
+- 막대 그래프 : https://observablehq.com/@d3/lets-make-a-bar-chart

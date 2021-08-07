@@ -29,18 +29,19 @@ var movieContent = function (oneMovieData) {
       <br>
       <div>
         <div style="font-size : 20px;">${oneMovieData.description}</div>
-      <div>
-    <div>
+      </div>
+    </div>
   `;
 }
 
+// 페이지 넘버에 따라서 몇 번 인덱스 부터 몇 번 인덱스까지 보여줄지를 정하는 로직이 필요했다.
 
 var pageNum = 1;
 var onpageTotalIndex = 5;
 
 var onePage = function (pageNum) {
-  startIndex = (pageNum - 1) * 5;
-  endIndex = pageNum * 5;
+  var startIndex = (pageNum - 1) * 5;
+  var endIndex = pageNum * 5;
   var sumMovieContents = "";
   for (var i = startIndex; i < endIndex; i++) {
     if(i < data.length){

@@ -7,3 +7,12 @@ button {
   font-weight: bold;
   margin-right: 14px;
 }
+
+
+#currentPage {
+  display: inline;
+  /* span 태그 처럼 문자만큼 크기가 생김 */
+  position: absolute;
+  margin-right : 120px;
+  right : 0;
+}

@@ -59,6 +59,7 @@ console.log("index 2 director : ", data[2].director);
 
 // 백틱을 사용해서 HTML 코드를 문자열로 적어 줄 수 있다
 // ${} 표현 안에 자바스크립트 코드를 넣을 수 있다.
+// 문자열이 아니라 js 코드의 결과를 보여주고 싶을 때 ${}을 사용한다.
 var sampleHTML = `
   <div>
     <div>
@@ -78,8 +79,8 @@ var sampleHTML = `
     <br>
     <div>
       <div style="font-size : 20px;">${data[0].description}</div>
-    <div>
-  <div>
+    </div>
+  </div>
 `;
 
 console.log("sampleHTML : ", sampleHTML);
